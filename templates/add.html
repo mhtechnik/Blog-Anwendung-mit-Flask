@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuen Beitrag hinzuf&uuml;gen &mdash; Mein Flask Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a class="back" href="{{ url_for('index') }}">Zur&uuml;ck zur &Uuml;bersicht</a>
+        <h1>Neuen Beitrag hinzuf&uuml;gen</h1>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" action="{{ url_for('add') }}">
+            <label for="author">Autor</label>
+            <input id="author" name="author" type="text" value="{{ (form.author if form else '')|e }}" required>
+
+            <label for="title">Titel</label>
+            <input id="title" name="title" type="text" value="{{ (form.title if form else '')|e }}" required>
+
+            <label for="content">Inhalt</label>
+            <textarea id="content" name="content" required>{{ (form.content if form else '')|e }}</textarea>
+
+            <div class="actions">
+                <button type="submit">Beitrag speichern</button>
+                <a href="{{ url_for('index') }}">Abbrechen</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

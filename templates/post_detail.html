@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }} &mdash; Mein Flask Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a class="back" href="{{ url_for('index') }}">Zur&uuml;ck zur &Uuml;bersicht</a>
+    <div class="post">
+        <h1>{{ post.title }}</h1>
+        <p><em>Von {{ post.author }}</em></p>
+        <p>{{ post.content }}</p>
+        <p>Likes: {{ post.get('likes', 0) }}</p>
+        <p><a href="{{ url_for('like', post_id=post.id) }}">Gef&auml;llt mir</a></p>
+    </div>
+</body>
+</html>

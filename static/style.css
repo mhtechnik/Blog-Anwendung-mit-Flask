@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4F4F4F;
+}
+
+.post {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    margin: 10px 0;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.error {
+    color: #B00020;
+    margin-bottom: 12px;
+}
+
+.container {
+    max-width: 720px;
+    margin: 24px auto;
+}
+
+.back {
+    margin-bottom: 16px;
+    display: inline-block;
+}
